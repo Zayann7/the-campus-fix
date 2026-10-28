@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Fix | Report an Issue</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <section class="form-card">
+            <div class="brand">CAMPUS FIX</div>
+
+            <h1>Report an Issue</h1>
+
+            <p class="subtitle">
+                Tell us about a campus problem so it can be reviewed.
+            </p>
+
+            <form id="issueForm" action="/api/submit" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                        maxlength="100"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        maxlength="254"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Issue Category</label>
+
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Classroom">Classroom</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="Building, floor, or room number"
+                        required
+                        maxlength="200"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Issue Description</label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="4"
+                        placeholder="Explain the issue in detail..."
+                        required
+                        maxlength="2000"
+                    ></textarea>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Submit Request
+                </button>
+
+                <p
+                    id="statusMessage"
+                    class="status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </form>
+
+            <p class="footer-text">
+                Powered by Node.js, Express and Flask
+            </p>
+        </section>
+    </main>
+</body>
+</html>

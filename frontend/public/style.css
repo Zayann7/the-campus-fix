@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f5f7;
+    color: #202b35;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    min-height: 100vh;
+}
+
+.form-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    padding: 36px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(22, 45, 57, 0.08);
+}
+
+.brand {
+    color: #176b61;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #172d38;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #6b7780;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8e0e4;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #202b35;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #176b61;
+    box-shadow: 0 0 0 3px rgba(23, 107, 97, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #176b61;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #10564e;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.status {
+    display: none;
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.status.success,
+.status.error {
+    display: block;
+}
+
+.status.success {
+    color: #155d37;
+    background: #e9f7ee;
+}
+
+.status.error {
+    color: #9b2525;
+    background: #fff0f0;
+}
+
+.footer-text {
+    margin-top: 24px;
+    text-align: center;
+    color: #8a959d;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .form-card {
+        padding: 24px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
